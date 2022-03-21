@@ -1,7 +1,9 @@
 from math import pi
 
 class GeometrischeFiguren():
-    pass
+
+    __slots__ = ()
+
 
 class Cirkel(GeometrischeFiguren):
 
@@ -37,8 +39,8 @@ class Cirkel(GeometrischeFiguren):
                 f"oppervlakte: {self.oppervlakte:.2f}")
         return info
 
-    # def __repr__(self):
-    #     return f"Cirkel({self._straal})"
+    def __repr__(self):
+        return f"Cirkel({self._straal})"
 
 
 
@@ -49,6 +51,9 @@ c1 = Cirkel(3)
 print('__str__ :')
 print(c1)
 print()
+print('__repr__ :')
+print(repr(c1))
+print()
 
 print('Docstring :')
 print(Cirkel.__doc__)
@@ -57,13 +62,13 @@ print()
 print('dir: ')
 print(dir(Cirkel))
 print()
-
-print('dict: ')
-print(c1.__dict__)
+#
+# print('dict: ')
+# print(c1.__dict__)
 
 c1.straal = 1
-
-c1.zijde = 5
-print(c1.zijde)
+#
+# c1.zijde = 5
+# print(c1.zijde)
 
 
