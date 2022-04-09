@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# data
+data = [25, 45, 30]
+labels = ["Rood", "Blauw", "Groen"]
+
+# plot
+fig, ax = plt.subplots()
+ax.pie(data, labels=labels, colors=['r', 'b', 'g'], startangle=180 , counterclock=False, autopct='%1.0f%%',
+       textprops={'size': 18} )
+plt.show()
